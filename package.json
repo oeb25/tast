@@ -1,0 +1,29 @@
+{
+  "name": "tast",
+  "version": "0.0.1",
+  "description": "A keyboard wrapper made for games",
+  "main": "lib/tast.js",
+  "scripts": {
+    "build": "rm -rf ./lib & ./node_modules/babel/bin/babel/index.js src --out-dir lib",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "patch": "npm version patch && npm publish && git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oeb25/tast.git"
+  },
+  "keywords": [
+    "keyboard",
+    "game",
+    "browser"
+  ],
+  "author": "Oliver Bøving",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oeb25/tast/issues"
+  },
+  "homepage": "https://github.com/oeb25/tast#readme",
+  "devDependencies": {
+    "babel": "^5.5.4"
+  }
+}
