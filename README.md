@@ -13,6 +13,6 @@ var Tast = require('tast');
 
 var keyboard = new Tast().listen();
 
-if (Tast.down(32))
+if (keyboard.down(32))
   console.log('Space is down!');
 ```
