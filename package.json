@@ -1,6 +1,6 @@
 {
   "name": "tast",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A keyboard wrapper made for games",
   "main": "lib/tast.js",
   "scripts": {
