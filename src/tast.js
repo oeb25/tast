@@ -16,11 +16,19 @@ export default class Tast {
   }
 
   down(id) {
+    if (Array.isArray(id)) {
+        for (var i = 0; i < id.length; i++) {
+          if (this.state[id[i]] === true) {
+            return true;
+          }
+        }
+    }
+
     return !!this.state[id];
   }
 
   up(id) {
-    return !this.state[id];
+    return !this.down(id);
   }
 
   save() {
@@ -34,6 +42,8 @@ export default class Tast {
 }
 
 export const KEYS = {
+  UP: 38, DOWN: 40, LEFT: 37, RIGHT: 39,
+
   SPACE: 32,
 
   A: 65, B: 66, C: 67, D: 68,
@@ -44,3 +54,5 @@ export const KEYS = {
   U: 85, V: 86, W: 87, X: 88,
   Y: 89, Z: 90
 };
+
+export * from './KeyLayout'
